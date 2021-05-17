@@ -15,15 +15,15 @@ plotman config generate
 
 cd /root
 mkdir ca
-wget -O /root/ca/chia_ca.crt https://raw.githubusercontent.com/iwex/chiascripts/main/ecopool/chia_ca.crt
-wget -O /root/ca/chia_ca.key https://raw.githubusercontent.com/iwex/chiascripts/main/ecopool/chia_ca.key
-wget -O /root/ca/private_ca.crt https://raw.githubusercontent.com/iwex/chiascripts/main/ecopool/private_ca.crt
-wget -O /root/ca/private_ca.key https://raw.githubusercontent.com/iwex/chiascripts/main/ecopool/private_ca.key
+wget -O /root/ca/chia_ca.crt https://github.com/VercauterenK/chiascripts/blob/main/ecopool/chia_ca.crt
+wget -O /root/ca/chia_ca.key https://github.com/VercauterenK/chiascripts/blob/main/ecopool/chia_ca.key
+wget -O /root/ca/private_ca.crt https://github.com/VercauterenK/chiascripts/blob/main/ecopool/private_ca.crt
+wget -O /root/ca/private_ca.key https://github.com/VercauterenK/chiascripts/blob/main/ecopool/private_ca.key
 
 chia init -c /root/ca
 
 chia configure --enable-upnp false
-chia configure --set-farmer-peer 136.243.104.155:8447
+chia configure --set-farmer-peer 192.168.70.202:8447
 chia configure --set-log-level INFO
 
 wget -O /root/chia-blockchain/venv/lib/python3.8/site-packages/chiapos.cpython-38-x86_64-linux-gnu.so https://raw.githubusercontent.com/iwex/chiascripts/main/ecopool/chiapos.cpython-38-x86_64-linux-gnu.so
