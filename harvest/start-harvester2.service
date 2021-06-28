@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/flax-blockchain/activate && sleep 10 && flax start harvester"
+
+[Install]
+WantedBy=default.target
