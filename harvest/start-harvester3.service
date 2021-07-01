@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/goji-blockchain/activate && sleep 10 && goji start harvester"
+
+[Install]
+WantedBy=default.target
