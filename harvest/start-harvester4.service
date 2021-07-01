@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/spare-blockchain/activate && sleep 10 && spare start harvester"
+
+[Install]
+WantedBy=default.target
