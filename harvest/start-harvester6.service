@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/doge-chia/activate && sleep 10 && dogechia start harvester"
+
+[Install]
+WantedBy=default.target
