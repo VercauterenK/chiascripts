@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/chiadoge-blockchain/activate && sleep 10 && chiadoge start harvester"
+
+[Install]
+WantedBy=default.target
