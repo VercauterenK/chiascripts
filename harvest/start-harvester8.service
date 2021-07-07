@@ -1,0 +1,9 @@
+[Unit]
+After=network.service
+
+[Service]
+Type=forking
+ExecStart=/bin/bash -c "source /home/kevin/equality-blockchain/activate && sleep 10 && equality start harvester"
+
+[Install]
+WantedBy=default.target
